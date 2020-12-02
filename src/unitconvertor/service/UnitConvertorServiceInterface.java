@@ -37,5 +37,4 @@ public interface UnitConvertorServiceInterface {
 	 * @return the miles from kilometers
 	 */
 	public double getMilesFromKilometers(double kilometers);
-
 }
