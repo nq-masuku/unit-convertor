@@ -6,25 +6,23 @@ public class UnitConvertorServiceInterfaceImpl implements UnitConvertorServiceIn
 	
 	@Override
 	public double getCelsiusFromKelvin(double kelvin) {
-		// TODO Auto-generated method stub
-		return 0;
+		//0 kelvin is equivalent to -273.15 celsius
+		return kelvin - 273.15 ;
 	}
 
 	@Override
 	public double getKelvinFromCelsius(double celsius) {
-		// TODO Auto-generated method stub
-		return 0;
+		return celsius + 273.15;
 	}
 
 	@Override
 	public double getKilometersFromMiles(double miles) {
-		// TODO Auto-generated method stub
-		return 0;
+		// 1km is equivalent to 0.6214 miles
+		return miles / 0.6214;
 	}
 
 	@Override
 	public double getMilesFromKilometers(double kilometers) {
-		// TODO Auto-generated method stub
-		return 0;
+		return kilometers * 0.6214;
 	}
 }
