@@ -12,7 +12,7 @@ public class UnitConvertorServiceTesting {
 	private static final Logger LOGGER = Logger.getLogger(UnitConvertorServiceTesting.class.getName());
 
 	public static void main(String[] args) throws InterruptedException {
-		//Below we test the service methods and log their execution time.
+		//Below we test the service methods and log their execution time. Used thread sleep for clear print out of execution durations. 
 		
 		UnitConvertorServiceInterface kcService=new UnitConvertorServiceInterfaceImpl();
 		long startTime;
@@ -23,23 +23,28 @@ public class UnitConvertorServiceTesting {
 		System.out.println(kcService.getCelsiusFromKelvin(260.0));
 		endTime = System.currentTimeMillis();
 		executionDuration("getCelsiusFromKelvin",startTime, endTime);
+		Thread.sleep(2000);
 		
 		
 		startTime = System.currentTimeMillis();
 		System.out.println(kcService.getKelvinFromCelsius(-33.15));
 		endTime = System.currentTimeMillis();
 		executionDuration("getKelvinFromCelsius",startTime, endTime);
-
+		Thread.sleep(2000);
+		
 		
 		startTime = System.currentTimeMillis();
 		System.out.println(kcService.getKilometersFromMiles(14.0));
 		endTime = System.currentTimeMillis();
 		executionDuration("getKilometersFromMiles",startTime, endTime);
-	
+		Thread.sleep(2000);
+		
+		
 		startTime = System.currentTimeMillis();
 		System.out.println(kcService.getMilesFromKilometers(14.08));
 		endTime = System.currentTimeMillis();
 		executionDuration("getMilesFromKilometers",startTime, endTime);
+		Thread.sleep(2000);
 
 	}
 	
